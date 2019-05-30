@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var flipCountLabel: UILabel!
     
-    let cardProvider: CardTextProvider = MoonEmojiProvider()
+    var cardProvider: CardTextProvider!
     
     @IBAction func touchCard(_ sender: UIButton) {
         if let cardNumber: Int = buttonArray.firstIndex(of: sender) {

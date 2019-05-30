@@ -9,22 +9,26 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    private let gameSegue = "show-game"
+    
+    var cardTextProvider: CardTextProvider?
+    
+    @IBAction func touchCuteAnimals(_ sender: UIButton) {
+        self.cardTextProvider = CuteAnimalsEmojiProvider()
+        self.performSegue(withIdentifier: gameSegue, sender: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func touchCuteMoons(_ sender: UIButton) {
+        self.cardTextProvider = MoonEmojiProvider()
+        self.performSegue(withIdentifier: gameSegue, sender: nil)
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? GameViewController {
+            destination.cardProvider = self.cardTextProvider
+        }
+        
+    }
+    
 }

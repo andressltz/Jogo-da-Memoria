@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+extension Bool {
+    
+    mutating func toogle() {
+        self = !self
+    }
+    
+}
+
+extension Array {
+    
+    mutating func getRandomAndDelete() -> Element {
+        let index = Int.random(in: self.indices)
+        return self.remove(at: index)
+    }
+    
+}

@@ -51,6 +51,8 @@ class GameViewController: UIViewController {
 //            
 //        }
         
+        var hasCard = false
+        
         for index in game.cards.indices {
             let button = self.buttonArray[index]
             let card = self.game.cards[index]
@@ -59,7 +61,6 @@ class GameViewController: UIViewController {
             
             if state == CardState.front {
                 button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//                button.setTitle(emoji(for: card), for: .normal)
                 button.setTitle(cardProvider.text(for: card.identifier), for: .normal)
             } else if state == CardState.matched{
                 button.isHidden = true
@@ -70,18 +71,6 @@ class GameViewController: UIViewController {
                 button.setTitle(" ", for: .normal)
             }
             
-//            if card.isFaceUp {
-//                button.backgroundColor = card.isMatched ? .clear : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//                button.setTitle(card.isMatched ? " " : emoji(for: card), for: .normal)
-//            } else {
-//                button.backgroundColor = #colorLiteral(red: 1, green: 0.5238200164, blue: 0.1280178063, alpha: 1)
-//                button.setTitle(" ", for: .normal)
-//            }
-        }
-        
-        var hasCard = false
-        
-        for card in game.cards {
             if card.isMatched == false {
                 hasCard = true
             }
@@ -100,42 +89,6 @@ class GameViewController: UIViewController {
             flipCountLabel.isHidden = true
         }
     }
-    
-//    var emojis: Dictionary<Int, String>
-//    var emojis = [Int: String]()
-    
-//    func emoji(for card: Card) -> String {
-//        if let emoji = emojis[card.identifier] {
-//            return emoji
-//        }
-//
-//        let emoji = emojisOptions.getRandomAndDelete()
-//
-////        let index = Int.random(in: emojisOptions.indices)
-////        let emoji = emojisOptions.remove(at: index)
-////        let emoji = emojisOptions.randomElement()
-//
-//        emojis[card.identifier] = emoji
-//
-//        return emoji
-//    }
-    
-//    @IBAction func touchSecondCard(_ sender: UIButton) {
-//        flipCard(withEmoji: "🐱", on: sender)
-//
-//        flipCount += 1
-//    }
-    
-//    func flipCard(withEmoji emoji: String, on button: UIButton) {
-//        print("touching card \(emoji)")
-//        if button.currentTitle == emoji {
-//            button.backgroundColor = #colorLiteral(red: 1, green: 0.5238200164, blue: 0.1280178063, alpha: 1) // UIColor.orange
-//            button.setTitle("", for: .normal)
-//        } else {
-//            button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//            button.setTitle(emoji, for: .normal)
-//        }
-//    }
     
     @IBAction func playAgain(_ sender: UIButton) { self.navigationController?.popToRootViewController(animated: true)
         //        self.performSegue(withIdentifier: "restart-game", sender: nil)

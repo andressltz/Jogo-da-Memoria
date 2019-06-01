@@ -35,9 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U25-Rm-31d">
-                                <rect key="frame" x="119" y="347" width="136" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="U25-Rm-31d">
+                                <rect key="frame" x="0.0" y="235.5" width="375" height="216"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Animais">
                                     <color key="titleColor" name="Color"/>
@@ -46,9 +45,14 @@
                                     <action selector="touchCuteAnimals:" destination="Zzs-NP-C5t" eventType="touchUpInside" id="4zJ-U9-JZq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-Z3-G7v">
-                                <rect key="frame" x="119" y="449" width="136" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá Com qual tipo de cartas você quer jogar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-WZ-gDZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="215.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zp7-Z3-G7v">
+                                <rect key="frame" x="0.0" y="451.5" width="375" height="215.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Luas">
                                     <color key="titleColor" name="Color"/>
@@ -57,15 +61,22 @@
                                     <action selector="touchCuteMoons:" destination="Zzs-NP-C5t" eventType="touchUpInside" id="bYA-cx-i8g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olá Com qual tipo de cartas você quer jogar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-WZ-gDZ">
-                                <rect key="frame" x="54" y="103" width="266" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" name="Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ejT-I6-ivJ" firstAttribute="trailing" secondItem="LBo-WZ-gDZ" secondAttribute="trailing" id="442-jc-PkU"/>
+                            <constraint firstItem="U25-Rm-31d" firstAttribute="top" secondItem="LBo-WZ-gDZ" secondAttribute="bottom" id="5Q1-3S-rTq"/>
+                            <constraint firstItem="U25-Rm-31d" firstAttribute="leading" secondItem="ejT-I6-ivJ" secondAttribute="leading" id="7Z1-2T-lSg"/>
+                            <constraint firstItem="LBo-WZ-gDZ" firstAttribute="leading" secondItem="ejT-I6-ivJ" secondAttribute="leading" id="F7W-Kq-vbf"/>
+                            <constraint firstItem="ejT-I6-ivJ" firstAttribute="trailing" secondItem="zp7-Z3-G7v" secondAttribute="trailing" id="Gc1-rx-rh2"/>
+                            <constraint firstItem="zp7-Z3-G7v" firstAttribute="leading" secondItem="ejT-I6-ivJ" secondAttribute="leading" id="KK5-qT-RHh"/>
+                            <constraint firstItem="LBo-WZ-gDZ" firstAttribute="top" secondItem="ejT-I6-ivJ" secondAttribute="top" id="OkI-aA-F1a"/>
+                            <constraint firstItem="zp7-Z3-G7v" firstAttribute="top" secondItem="U25-Rm-31d" secondAttribute="bottom" id="QQc-KT-Ua3"/>
+                            <constraint firstItem="LBo-WZ-gDZ" firstAttribute="height" secondItem="ejT-I6-ivJ" secondAttribute="height" multiplier="1/3" id="ULd-RU-Gtq"/>
+                            <constraint firstItem="ejT-I6-ivJ" firstAttribute="trailing" secondItem="U25-Rm-31d" secondAttribute="trailing" id="ZM6-Sb-Zq2"/>
+                            <constraint firstItem="U25-Rm-31d" firstAttribute="height" secondItem="ejT-I6-ivJ" secondAttribute="height" multiplier="1/3" id="tXC-2Z-4tl"/>
+                            <constraint firstItem="zp7-Z3-G7v" firstAttribute="height" secondItem="ejT-I6-ivJ" secondAttribute="height" multiplier="1/3" id="xc9-r2-qM0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ejT-I6-ivJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="OIn-ZL-yup"/>

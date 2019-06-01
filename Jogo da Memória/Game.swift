@@ -58,7 +58,7 @@ class Game {
 //            self.cards += [card, secondCard]
             
             self.cards += [card, card]
-            cards.shuffle()
+//            cards.shuffle()
         }
     }
 }

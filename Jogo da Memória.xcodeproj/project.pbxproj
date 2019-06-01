@@ -16,6 +16,7 @@
 		4143B9D8229975A8007002EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4143B9D6229975A8007002EB /* LaunchScreen.storyboard */; };
 		4143B9E12299A0E8007002EB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4143B9E02299A0E8007002EB /* Game.swift */; };
 		4143B9E32299AAB7007002EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4143B9E22299AAB7007002EB /* Extensions.swift */; };
+		415ACF8122A2210F00ACB6B7 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415ACF8022A2210F00ACB6B7 /* EndGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4143B9D9229975A8007002EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4143B9E02299A0E8007002EB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		4143B9E22299AAB7007002EB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		415ACF8022A2210F00ACB6B7 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,6 @@
 		4143B9C1229975A7007002EB = {
 			isa = PBXGroup;
 			children = (
-				4111C5F3229EAEB800A8FFBE /* CardTextProvider.swift */,
 				4143B9CC229975A7007002EB /* Jogo da Memória */,
 				4143B9CB229975A7007002EB /* Products */,
 			);
@@ -63,10 +64,12 @@
 		4143B9CC229975A7007002EB /* Jogo da Memória */ = {
 			isa = PBXGroup;
 			children = (
+				4111C5F3229EAEB800A8FFBE /* CardTextProvider.swift */,
 				4111C5F7229EC5EE00A8FFBE /* GameViewController.swift */,
 				4143B9DF2299772B007002EB /* Supporting Files */,
 				4143B9E22299AAB7007002EB /* Extensions.swift */,
 				4143B9D1229975A7007002EB /* Main.storyboard */,
+				415ACF8022A2210F00ACB6B7 /* EndGameViewController.swift */,
 				4111C5F9229ECBE900A8FFBE /* WelcomeViewController.swift */,
 				4143B9D9229975A8007002EB /* Info.plist */,
 				4143B9E02299A0E8007002EB /* Game.swift */,
@@ -160,6 +163,7 @@
 				4143B9E12299A0E8007002EB /* Game.swift in Sources */,
 				4111C5FA229ECBE900A8FFBE /* WelcomeViewController.swift in Sources */,
 				4143B9CE229975A7007002EB /* AppDelegate.swift in Sources */,
+				415ACF8122A2210F00ACB6B7 /* EndGameViewController.swift in Sources */,
 				4143B9E32299AAB7007002EB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

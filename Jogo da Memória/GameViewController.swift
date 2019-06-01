@@ -18,8 +18,10 @@ class GameViewController: UIViewController {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
     }
+    @IBOutlet weak var youWinLabel: UILabel!
     
-//    var emojis: Array<Strings> = ["", ""]
+    @IBOutlet weak var playAgainButton: UIButton!
+    //    var emojis: Array<Strings> = ["", ""]
 //    var emojisOptions = ["🐶", "🐱", "🐸", "🐭", "🐮", "🐷"]
     
     @IBOutlet var buttonArray: [UIButton]!
@@ -76,6 +78,27 @@ class GameViewController: UIViewController {
 //                button.setTitle(" ", for: .normal)
 //            }
         }
+        
+        var hasCard = false
+        
+        for card in game.cards {
+            if card.isMatched == false {
+                hasCard = true
+            }
+        }
+        
+        if !hasCard {
+//            self.navigationController?.pushViewController(WelcomeViewController(), animated: false)
+//            self.navigationController?.show(WelcomeViewController(), sender: nil)
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let endGameViewController = storyBoard.instantiateViewController(withIdentifier: "endGame") as! EndGameViewController
+//            self.present(endGameViewController, animated: true, completion: nil)
+//            self.navigationController?.pushViewController(EndGameViewController(), animated: false)
+            
+            youWinLabel.isHidden = false
+            playAgainButton.isHidden = false
+            flipCountLabel.isHidden = true
+        }
     }
     
 //    var emojis: Dictionary<Int, String>
@@ -113,6 +136,10 @@ class GameViewController: UIViewController {
 //            button.setTitle(emoji, for: .normal)
 //        }
 //    }
+    
+    @IBAction func playAgain(_ sender: UIButton) { self.navigationController?.popToRootViewController(animated: true)
+        //        self.performSegue(withIdentifier: "restart-game", sender: nil)
+    }
     
 }
 

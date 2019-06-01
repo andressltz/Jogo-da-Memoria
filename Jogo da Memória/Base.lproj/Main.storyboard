@@ -212,6 +212,25 @@
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tk0-cc-jdP"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parabéns você ganhou!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ0-o0-M3H">
+                                <rect key="frame" x="16" y="64" width="343" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFN-FG-l6P">
+                                <rect key="frame" x="76" y="553" width="223" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Jogar novamente">
+                                    <color key="titleColor" name="Color"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlL-yF-BNl"/>
+                                    <action selector="playAgain:" destination="ROn-xv-X3N" eventType="touchUpInside" id="hY8-m3-oQf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -219,6 +238,8 @@
                     <navigationItem key="navigationItem" id="msF-qs-43P"/>
                     <connections>
                         <outlet property="flipCountLabel" destination="Ndu-8r-Jak" id="VYg-DU-48O"/>
+                        <outlet property="playAgainButton" destination="xFN-FG-l6P" id="za2-ua-0o1"/>
+                        <outlet property="youWinLabel" destination="ZJ0-o0-M3H" id="UJu-7J-e60"/>
                         <outletCollection property="buttonArray" destination="sWs-Gk-FDV" collectionClass="NSMutableArray" id="DKx-9D-3bi"/>
                         <outletCollection property="buttonArray" destination="5qi-Yg-iPF" collectionClass="NSMutableArray" id="MoZ-cL-DJN"/>
                         <outletCollection property="buttonArray" destination="KJD-2l-uhg" collectionClass="NSMutableArray" id="Qor-v0-n1H"/>
@@ -237,6 +258,46 @@
             </objects>
             <point key="canvasLocation" x="418" y="116"/>
         </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="DEq-GR-Z7Z">
+            <objects>
+                <viewController id="ROn-xv-X3N" customClass="EndGameViewController" customModule="Jogo_da_Memo_ria" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vNP-ha-7NR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parabéns você ganhou!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-FX-LAw">
+                                <rect key="frame" x="16" y="143" width="343" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3V-pP-0hb">
+                                <rect key="frame" x="76" y="487" width="223" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Jogar novamente">
+                                    <color key="titleColor" name="Color"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="ROn-xv-X3N" eventType="touchUpInside" id="7YD-oh-UKt"/>
+                                    <segue destination="Zzs-NP-C5t" kind="show" identifier="restart-game" id="Z5f-Xl-KU1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="dWl-Y6-xB6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="acy-63-sMY"/>
+                    <connections>
+                        <outlet property="playAgain" destination="U3V-pP-0hb" id="bgq-8M-ZOS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNn-C0-XDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="863"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="BackgroundColor">
@@ -246,4 +307,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z5f-Xl-KU1"/>
+    </inferredMetricsTieBreakers>
 </document>
